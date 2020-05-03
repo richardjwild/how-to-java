@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-[Hello, world!](helloworld.html)
+Here is a link: [Hello, world!](helloworld)
 
 You can use the [editor on GitHub](https://github.com/richardjwild/how-to-java/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
