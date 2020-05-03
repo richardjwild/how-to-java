@@ -2,6 +2,16 @@
 
 This tutorial explains the basics of compiling and running a Java application. It explains the essential components of a Java class definition, how packages are represented in the filesystem, how Java programs are compiled, how they are executed, and how they can be packaged for deployment. 
 
+## Contents
+1. [Our first class](#Our first class)
+1. [Anatomy of a Java class](#Anatomy of a Java class)
+1. [Compiling a Java program](#Compiling a Java program)
+1. [Running a Java program](#Running a Java program)
+1. [Separating class and source files](#Separating class and source files)
+1. [Class dependencies](#Class dependencies)
+1. [Jar files](#Jar files)
+1. [Executable jar files](#Executable jar files)
+
 ## Our first class
 
 To begin, create a directory structure to house the project:
