@@ -192,7 +192,7 @@ Hello, world!
 Pleased to meet you!
 ```
 
-However, you can pass more than one Java source file to the compiler at once, and when you do this then it will happily resolve the dependencies itself, providing all the required class definitions are there:
+However, you can pass more than one Java source file to the compiler at once, and when you do this then it will happily resolve the dependencies itself, so long as all the class definitions it requires are present:
 
 ```
 $ javac -d out src/how/to/java/HelloWorld.java \
