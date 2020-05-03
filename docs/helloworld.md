@@ -4,7 +4,7 @@
 
 To begin, create a directory structure to house the project:
 
-```shell script
+```shell
 $ mkdir -p helloworld/src/how/to/java
 ```
 
@@ -42,7 +42,9 @@ public static void main(String[] args) {
 The `static` modifier means that the method belongs to the class, not to an instance of a class, therefore you do not need an instance of `HelloWorld` in order to execute the `main` method. You can do it with:
 
 ```java
-HelloWorld.main(args);
+{
+    HelloWorld.main(args);
+}
 ```
 
 The signature of this particular method is special, and it makes the `HelloWorld` class a "main" class. That means it can be used as the entry point for an application. A Java application can contain any number of main classes. We will see how to run it shortly.
@@ -51,13 +53,13 @@ The signature of this particular method is special, and it makes the `HelloWorld
 
 To compile our program, ensure that you are in the `helloworld` directory, and execute this command:
 
-```shell script
+```shell
 $ javac src/how/to/java/HelloWorld.java
 ```
 
 Notice that this has created a new file with a `.class` suffix alongside the original source file:
 
-```shell script
+```shell
 $ ls -l src/how/to/java
 total 16
 -rw-r--r--  1 richardwild  staff  439  3 May 15:35 HelloWorld.class
@@ -66,7 +68,7 @@ total 16
 
 To run the program, execute this command:
 
-```shell script
+```shell
 $ java -classpath src how.to.java.HelloWorld
 Hello, world!
 ```
@@ -79,7 +81,7 @@ Since it is a path, you can have as many directories on your classpath as you wa
 
 You can also define an environment variable `CLASSPATH` and then there is no need to pass the `-classpath` argument to the runtime:
 
-```shell script
+```shell
 $ export CLASSPATH=src
 $ java how.to.java.HelloWorld                                                                                        !10198
 Hello, world!
@@ -89,7 +91,7 @@ Hello, world!
 
 In practice, we never want the class files to go in the same directory as the java files. We can specify a different directory for the compiled code using the `-d` compiler switch:
 
-```shell script
+```shell
 $ mkdir out
 $ javac -d out src/how/to/java/HelloWorld.java
 $ ls -l out/how/to/java
@@ -101,7 +103,7 @@ As you can see it has created the directories for the package structure, althoug
 
 Running the program is the same as before, except that now we provide the `out` directory as the classpath:
 
-```shell script
+```shell
 $ java -classpath out how.to.java.HelloWorld
 Hello, world!
 ```
@@ -138,7 +140,7 @@ public class HelloWorld {
 
 Now when we try to compile `HelloWorld.java` we get an error:
 
-```shell script
+```shell
  javac -d out src/how/to/java/HelloWorld.java
 src/how/to/java/HelloWorld.java:7: error: cannot find symbol
         Greeting greeting = new Greeting();
@@ -157,13 +159,13 @@ src/how/to/java/HelloWorld.java:7: error: cannot find symbol
 
 We can fix this by adding a `-sourcepath` option switch to the compiler:
 
-```shell script
+```shell
 $ javac -d out -sourcepath src src/how/to/java/HelloWorld.java
 ```
 
 Now we see that the compiler has compiled the `Greeting` class even though we did not explicitly tell it to:
 
-```shell script
+```shell
 $ ls -l out/how/to/java
 total 16
 -rw-r--r--  1 richardwild  staff  418  3 May 16:36 Greeting.class
@@ -172,7 +174,7 @@ total 16
 
 and the program will run correctly:
 
-```shell script
+```shell
 $ java -classpath out how.to.java.HelloWorld
 Hello, world!
 Pleased to meet you!
@@ -180,7 +182,7 @@ Pleased to meet you!
 
 However, you can pass more than one Java source file to the compiler at once, and when you do this then it will happily resolve the dependencies itself, providing all the required class definitions are there:
 
-```shell script
+```shell
 $ javac -d out src/how/to/java/HelloWorld.java \
 src/how/to/java/Greeting.java
 ```
