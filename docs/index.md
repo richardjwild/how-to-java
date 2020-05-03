@@ -1,39 +1,7 @@
-## Welcome to GitHub Pages
+## Welcome!
 
-Here is a link: [Hello, world!](helloworld)
+This site aims to be the resource for well experienced programmers who need to get up to speed with Java in the shortest time possible. It goes through all the things that are necessary to know, in roughly historical order, without labouring general programming matters that you probably already know. For example, it assumes prior knowledge of object oriented programming and will make no attempt to explain these concepts and techniques. 
 
-You can use the [editor on GitHub](https://github.com/richardjwild/how-to-java/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/richardjwild/how-to-java/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Contents
+### The basics
+1. [Hello, world!](helloworld) - How to compile, run and package a Java program from the command line.
