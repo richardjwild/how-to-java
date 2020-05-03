@@ -215,7 +215,7 @@ adding: how/to/java/HelloWorld.class(in = 508) (out= 339)(deflated 33%)
 adding: how/to/java/Greeting.class(in = 418) (out= 294)(deflated 29%)
 ```
 
-We can now run the Java application from the jar file by specifying the jar as the classpath:
+This assumes that the compiled class files are located in the `out` directory, as in our previous example. We can now run the Java application from the jar file by specifying the jar as the classpath:
 
 ```
 $ java -classpath HelloWorld.jar how.to.java.HelloWorld
